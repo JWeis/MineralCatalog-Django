@@ -12,3 +12,5 @@ def mineral_list(request):
 def mineral_detail(request, pk):
     mineral = Mineral.objects.get(pk=pk)
     return render(request, 'minerals/detail.html', {'mineral':mineral})
+
+
