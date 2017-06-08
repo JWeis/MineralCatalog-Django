@@ -1,13 +1,17 @@
 {% extends 'layout.html' %}
 {% load static from staticfiles %}
 
+{% block static %}
+    <link rel="stylesheet" href="{% static 'minerals/css/mineral.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="grid-100 mineral__container">
-      <h1 class="mineral__name">{{mineral.name}}</h1>
+      <h1 class="mineral__name">{{mineral.name|title}}</h1>
       <div class="mineral__image-bg">
         <img class="mineral__image" src="{% static 'minerals/images/' %}{{mineral.name}}.jpg">
         {% if mineral.image_caption %}
-          <p class="mineral__caption">{{image_caption}}</p>
+          <p class="mineral__caption">{{image_caption|title}}</p>
         {% endif %}
       </div>
       <div class="mineral__table-container">
@@ -15,7 +19,7 @@
           {% if mineral.category %}
           <tr>
             <td class="mineral__category">Category</td>
-            <td>{{mineral.category}}</td>
+            <td>{{mineral.category|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.formula %}
@@ -27,91 +31,91 @@
           {% if mineral.strunz_classification %}
           <tr>
             <td class="mineral__category">Strunz Classification</td>
-            <td>{{mineral.strunz_classification}}</td>
+            <td>{{mineral.strunz_classification|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.crystal_system %}
           <tr>
             <td class="mineral__category">Crystal System</td>
-            <td>{{mineral.crystal_system}}</td>
+            <td>{{mineral.crystal_system|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.unit_cell %}
           <tr>
             <td class="mineral__category">Unit Cell</td>
-            <td>{{mineral.unit_cell}}</td>
+            <td>{{mineral.unit_cell|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.color %}
           <tr>
             <td class="mineral__category">Color</td>
-            <td>{{mineral.color}}</td>
+            <td>{{mineral.color|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.crystal_symmetry %}
           <tr>
             <td class="mineral__category">Crystal Symmetry</td>
-            <td>{{mineral.crystal_symmetry}}</td>
+            <td>{{mineral.crystal_symmetry|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.cleavage %}
           <tr>
             <td class="mineral__category">Cleavage</td>
-            <td>{{mineral.cleavage}}</td>
+            <td>{{mineral.cleavage|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.mohs_scale_hardness %}
           <tr>
             <td class="mineral__category">Mohs Scale Hardness</td>
-            <td>{{mineral.mohs_scale_hardness}}</td>
+            <td>{{mineral.mohs_scale_hardness|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.luster %}
           <tr>
             <td class="mineral__category">Luster</td>
-            <td>{{mineral.luster}}</td>
+            <td>{{mineral.luster|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.streak %}
           <tr>
             <td class="mineral__category">Streak</td>
-            <td>{{mineral.streak}}</td>
+            <td>{{mineral.streak|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.diaphaneity %}
           <tr>
             <td class="mineral__category">Diaphaneity</td>
-            <td>{{mineral.diaphaneity}}</td>
+            <td>{{mineral.diaphaneity|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.optical_properties %}
           <tr>
             <td class="mineral__category">Optical Properties</td>
-            <td>{{mineral.optical_properties}}</td>
+            <td>{{mineral.optical_properties|title}}</td>
           </tr>
           {% endif %}
           {% if refractive_index %}
           <tr>
             <td class="mineral__category">Refractive Index</td>
-            <td>{{mineral.refractive_index}}</td>
+            <td>{{mineral.refractive_index|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.crystal_habit %}
           <tr>
             <td class="mineral__category">Crystal Habit</td>
-            <td>{{mineral.crystal_habit}}</td>
+            <td>{{mineral.crystal_habit|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.specific_gravity %}
           <tr>
             <td class="mineral__category">Specific Gravity</td>
-            <td>{{mineral.specific_gravity}}</td>
+            <td>{{mineral.specific_gravity|title}}</td>
           </tr>
           {% endif %}
           {% if mineral.group %}
           <tr>
             <td class="mineral__category">Group</td>
-            <td>{{mineral.group}}</td>
+            <td>{{mineral.group|title}}</td>
           </tr>
           {% endif %}
         </table>

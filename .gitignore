@@ -10,3 +10,12 @@
 MineralCatalog/__pycache__/views.cpython-36.pyc
 
 MineralCatalog/__pycache__/views.cpython-36.pyc
+
+minerals/__pycache__/urls.cpython-36.pyc
+
+minerals/__pycache__/urls.cpython-36.pyc
+
+minerals/__pycache__/views.cpython-36.pyc
+
+*.coverage
+

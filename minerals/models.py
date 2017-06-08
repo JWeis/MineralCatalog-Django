@@ -29,7 +29,7 @@ class Mineral(models.Model):
     def __str__(self):
         return self.name
 
-    @classmethod
+    @classmethod  # pragma: no cover
     def data_import(cls):
         json_data = open('minerals/minerals.json')
         all_data = json.load(json_data)

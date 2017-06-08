@@ -1,0 +1,11 @@
+.mineral__table{
+    width: 100%;
+}
+
+td, .mineral__category{
+    text-align: center;
+}
+ tr{
+     border-left: 1px solid #e1e1e1;
+     border-right: 1px dashed #e1e1e1;
+ }
